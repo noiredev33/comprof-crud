@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Berkas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+       <aside class="bg-[#1E3A56] text-white w-64 space-y-6 py-7 px-4">
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-2 px-4">
+            <img src="logobpn.png" alt="Logo Bpn" class="w-12 h-12 rounded-full">
+            <span class="text-xl font-bold">Admin Panel</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav>
+            <a href="dashboard.html" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Dashboard</a>
+            <a href="profile.html" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Profile</a>
+            <a href="cekberkas.html" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Cek Berkas</a>
+            <a href="pengaduan.html" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Pengaduan</a>
+        </nav>
+
+        <!-- Profile Section -->
+        <div class="mt-auto flex items-center px-4 space-x-3">
+            <img src="https://i.pinimg.com/736x/f5/2f/28/f52f28b0fbd8afa54105f07138d8573a.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+            <div>
+                <p class="text-sm font-semibold">Frank Ocean</p>
+                <p class="text-xs text-gray-400">My Profile</p>
+            </div>
+        </div>
+    </aside>
+
+          <!-- Main Content -->
+          <div class="flex-1 bg-gray-100">
+            <!-- Header -->
+            <header class="bg-white shadow px-6 py-4 flex items-center justify-between">
+                <h1 class="text-2xl font-semibold text-gray-700">Profile</h1>
+                <a href="login.html" target="_blank" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
+                    logout
+                  </a>  
+            </header>
+
+ 
+ <!-- Profile Section -->
+ <main class="p-6">
+    <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-8">
+        <!-- Foto Profil -->
+        <div class="flex-shrink-0">
+            <img src="https://i.pinimg.com/736x/f5/2f/28/f52f28b0fbd8afa54105f07138d8573a.jpg" alt="Profile Photo" class="w-40 h-40 rounded-full object-cover border">
+        </div>
+        <!-- Detail Informasi -->
+        <div class="space-y-4 text-gray-700">
+            <div>
+                <span class="block font-semibold text-lg">Nama</span>
+                <p id="display-nama" class="text-gray-600">Frank Ocean</p>
+            </div>
+            <div>
+                <span class="block font-semibold text-lg">NIP</span>
+                <p id="display-nip" class="text-gray-600">1195879635248</p>
+            </div>
+            <div>
+                <span class="block font-semibold text-lg">Golongan</span>
+                <p id="display-golongan" class="text-gray-600">Eselon 1</p>
+            </div>
+            <div>
+                <span class="block font-semibold text-lg">Jabatan</span>
+                <p id="display-jabatan" class="text-gray-600">Jungler - Goldlane</p>
+            </div>
+            <!-- Tombol Edit -->
+            <div>
+                <button id="edit-button" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
+                    Edit Profile
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

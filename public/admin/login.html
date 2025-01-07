@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="flex min-h-screen">
+        <!-- Sidebar Kiri -->
+        <div class="relative w-1/3 bg-[#1E3A56] text-white flex flex-col justify-start px-8 py-6">
+            <!-- Logo dan Nama -->
+            <div class="flex items-center space-x-4 mb-16">
+                <img src="logobpn.png" alt="Logo Bpn" class="w-12 h-12 rounded-full">
+                <h1 class="text-xl font-semibold">Admin Kantor Pertanahan <br>Kabupaten Gresik</h1>
+            </div>
+
+            <!-- Login Form -->
+            <div class="relative z-10 text-black">
+                <h2 class="text-lg font-bold text-white mb-6">Login Admin</h2>
+                <form onsubmit="redirectToDashboard(event)">
+                    <div class="mb-4">
+                        <label for="username" class="block text-white mb-1">Username</label>
+                        <input id="username" type="text" class="w-full p-1 rounded bg-gray-200 text-black">
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-white mb-1">Password</label>
+                        <input id="password" type="password" class="w-full p-1 rounded bg-gray-200 text-black">
+                    </div>
+                    <!-- Tombol dan Checkbox -->
+                    <div class="flex items-center justify-between mb-6">
+                        <label class="inline-flex items-center text-white">
+                            <input type="checkbox" class="mr-2">
+                            Ingat Saya
+                        </label>
+                        <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bagian Kanan Kosong -->
+        <div class="w-2/3 bg-gray-100"></div>
+    </div>
+
+    <script>
+        function redirectToDashboard(event) {
+            event.preventDefault(); // Menghindari refresh atau pengiriman form
+            // Pengalihan ke halaman dashboard.html
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>
