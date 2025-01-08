@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="bg-[#1E3A56] text-white w-64 space-y-6 py-7 px-4">
+            <div class="flex items-center space-x-2 px-4">
+                <img src="logobpn.png" alt="Logo BPN" class="w-12 h-12 rounded-full">
+                <span class="text-xl font-bold">Super Admin Panel</span>
+            </div>
+            <nav>
+                <a href="#" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Dashboard</a>
+                <a href="#" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Manajemen Pengguna</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <header class="bg-white shadow px-6 py-4 flex justify-between items-center">
+                <h1 class="text-2xl font-semibold text-gray-700">Dashboard</h1>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Logout</button>
+            </header>
+
+            <main class="p-6">
+                <!-- Statistik Berkas -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h2 class="text-lg font-semibold text-gray-700">Berkas Selesai</h2>
+                        <p class="text-3xl font-bold text-green-600">120</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h2 class="text-lg font-semibold text-gray-700">Berkas Pending</h2>
+                        <p class="text-3xl font-bold text-red-600">30</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h2 class="text-lg font-semibold text-gray-700">Berkas Baru</h2>
+                        <p class="text-3xl font-bold text-blue-600">45</p>
+                    </div>
+                </div>
+
+                <!-- Highlight Pekerjaan Admin -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-bold mb-4">Highlight Pekerjaan Admin</h2>
+                    <ul class="space-y-4">
+                        <li class="py-3 px-4 border rounded-md bg-gray-50 shadow-sm">
+                            <strong>Admin 1</strong> menyelesaikan <strong>Berkas #123</strong> pada <small class="text-gray-500">20 Jan 2025</small>
+                        </li>
+                        <li class="py-3 px-4 border rounded-md bg-gray-50 shadow-sm">
+                            <strong>Admin 2</strong> menambahkan <strong>Berkas #124</strong> pada <small class="text-gray-500">21 Jan 2025</small>
+                        </li>
+                        <!-- Tambahkan highlight lainnya -->
+                    </ul>
+                </div>
+
+                <!-- Log Aktivitas -->
+                <div class="bg-white p-6 rounded-lg shadow mt-6">
+                    <h2 class="text-xl font-bold mb-4">Log Aktivitas</h2>
+                    <ul class="space-y-4">
+                        <li class="py-3 px-4 border rounded-md bg-gray-50 shadow-sm">
+                            <strong>Admin 1</strong> melakukan <em>edit</em> pada <strong>Berkas #123</strong> <br>
+                            <small class="text-gray-500">20 Jan 2025, 10:00 AM</small>
+                        </li>
+                        <!-- Tambahkan log lainnya -->
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

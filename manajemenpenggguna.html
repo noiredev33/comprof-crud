@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Pengguna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="bg-[#1E3A56] text-white w-64 space-y-6 py-7 px-4">
+            <div class="flex items-center space-x-2 px-4">
+                <img src="logobpn.png" alt="Logo BPN" class="w-12 h-12 rounded-full">
+                <span class="text-xl font-bold">Super Admin Panel</span>
+            </div>
+            <nav>
+                <a href="superadmin.html" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Dashboard</a>
+                <a href="#" class="block py-2.5 px-4 rounded transition hover:bg-blue-700">Manajemen Pengguna</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 bg-gray-100">
+            <header class="bg-white shadow px-6 py-4">
+                <h1 class="text-2xl font-semibold text-gray-700">Manajemen Pengguna</h1>
+            </header>
+
+            <main class="p-6">
+                <!-- Form Tambah/Edit Pengguna -->
+                <div class="bg-white p-6 rounded-lg shadow mb-6">
+                    <h2 class="text-xl font-bold mb-4">Tambah/Edit Pengguna</h2>
+                    <form id="user-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium">Nama</label>
+                                <input type="text" id="name" class="w-full p-2 border rounded-lg" placeholder="Nama Pengguna">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium">Email</label>
+                                <input type="email" id="email" class="w-full p-2 border rounded-lg" placeholder="Email Pengguna">
+                            </div>
+                            <div>
+                                <label for="role" class="block text-gray-700 font-medium">Peran</label>
+                                <select id="role" class="w-full p-2 border rounded-lg">
+                                    <option value="Admin">Admin</option>
+                                    <option value="Super Admin">Super Admin</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="golongan" class="block text-gray-700 font-medium">Golongan</label>
+                                <input type="text" id="golongan" class="w-full p-2 border rounded-lg" placeholder="Golongan">
+                            </div>
+                            <div>
+                                <label for="jabatan" class="block text-gray-700 font-medium">Jabatan</label>
+                                <input type="text" id="jabatan" class="w-full p-2 border rounded-lg" placeholder="Jabatan">
+                            </div>
+                        </div>
+                        <button type="submit" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Simpan</button>
+                    </form>
+                </div>
+
+                <!-- Tabel Pengguna -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-bold mb-4">Daftar Pengguna</h2>
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 border">Nama</th>
+                                <th class="py-2 px-4 border">Email</th>
+                                <th class="py-2 px-4 border">Peran</th>
+                                <th class="py-2 px-4 border">Golongan</th>
+                                <th class="py-2 px-4 border">Jabatan</th>
+                                <th class="py-2 px-4 border">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Contoh Data Pengguna -->
+                            <tr>
+                                <td class="py-2 px-4 border">Admin 1</td>
+                                <td class="py-2 px-4 border">admin1@example.com</td>
+                                <td class="py-2 px-4 border">Admin</td>
+                                <td class="py-2 px-4 border">III/B</td>
+                                <td class="py-2 px-4 border">Kepala Seksi</td>
+                                <td class="py-2 px-4 border">
+                                    <button class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600">Edit</button>
+                                    <button class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Hapus</button>
+                                </td>
+                            </tr>
+                            <!-- Ulangi untuk pengguna lainnya -->
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Skrip sederhana untuk simulasi fungsi tambah/edit/hapus pengguna
+        document.getElementById('user-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Logika untuk menambah/edit data pengguna
+            alert('Pengguna berhasil disimpan!');
+        });
+
+        // Tambahkan skrip tambahan untuk pengeditan dan penghapusan pengguna sesuai kebutuhan
+    </script>
+</body>
+</html>
